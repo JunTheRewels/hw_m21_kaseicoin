@@ -8,4 +8,24 @@ The crowdsale contract manages the entire crowdsale process, allowing users to s
 
 ![Compiled coin](/evaluationEvidence/1.PNG)
 
-![Crowdsale deployer](/evaluationEvidence/Remix - Ethereum IDE - Google Chrome 2021-10-23 13-16-00.mp4)
+![Compiled crowdsale](/evaluationEvidence/2.PNG)
+
+![Deployed contract 1](/evaluationEvidence/3.gif)
+
+![Deployed contract 2](/evaluationEvidence/4.gif)
+
+![Deployed contract 3](/evaluationEvidence/5.gif)
+
+![Deployed contract 4](/evaluationEvidence/6.gif)
+
+![Deployed contract 5](/evaluationEvidence/7.gif)
+
+![Deployed contract 6](/evaluationEvidence/8.gif)
+
+![Deployed contract 7](/evaluationEvidence/9.gif)
+
+![Deployed contract 8](/evaluationEvidence/10.gif)
+
+![Deployed contract 9](/evaluationEvidence/11.gif)
+
+![Transactions](/evaluationEvidence/12.PNG)
