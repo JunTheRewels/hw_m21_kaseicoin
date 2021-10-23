@@ -1,35 +1,11 @@
 pragma solidity ^0.5.0;
 
-import "./KaseiCoin.sol";
-import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/release-v2.5.0/contracts/crowdsale/Crowdsale.sol";
-import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/release-v2.5.0/contracts/crowdsale/emission/MintedCrowdsale.sol";
+import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/release-v2.5.0/contracts/token/ERC20/ERC20.sol";
+import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/release-v2.5.0/contracts/token/ERC20/ERC20Detailed.sol";
+import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/release-v2.5.0/contracts/token/ERC20/ERC20Mintable.sol";
 
-contract KaseiCoinCrowdsale is Crowdsale, MintedCrowdsale {
+contract KaseiCoinToken is ERC20, ERC20Detailed, ERC20Mintable {
     
-    constructor(
-        uint rate,
-        address payable wallet,
-        KaseiCoinToken token
-    ) public Crowdsale(rate, wallet, token) {}
-}
-
-contract KaseiCoinCrowdsaleDeployer {
-    address public kasei_token_address;
-    address public kasei_crowdsale_address;
-
-    constructor(
-       string memory name,
-       string memory symbol,
-       address payable wallet
-    ) public {
-        
-        KaseiCoinToken token = new KaseiCoinToken(name, symbol, 0);
-        kasei_token_address = address(token);
-
-        KaseiCoinCrowdsale kasei_crowdsale = new KaseiCoinCrowdsale(1, wallet, token);
-        kasei_crowdsale_address = address(kasei_crowdsale);
-            
-        token.addMinter(kasei_crowdsale_address);
-        token.renounceMinter();
-    }
+    constructor(string memory name, string memory symbol, uint initial_supply)
+        ERC20Detailed(name, symbol, 18) public {}
 }
